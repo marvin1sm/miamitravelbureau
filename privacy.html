@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Miami Travel Bureau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
+<meta name="theme-color" content="#0F3C6B" />
+<style>
+  :root{
+    --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
+    --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
+    --glass-border:rgba(255,255,255,.30);--shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{width:min(1120px,92vw);margin-inline:auto}
+
+  /* Background */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;
+    background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
+    filter:brightness(.9) saturate(1.05);transform:scale(1.02);
+  }
+
+  /* Navbar */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
+    backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+    box-shadow:var(--shadow);
+  }
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:12px;margin-left:60px}
+  .brand__mark{height:48px;width:auto}
+  .brand__text{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;font-size:22px}
+  .menu{display:flex;gap:8px;align-items:center;margin-left:auto;padding-right:40px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+    font-weight:700;font-size:.9rem;color:#fff;background:var(--glass-fill);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+    box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
+  }
+  .btn:hover{background:var(--glass-fill-hover);border-color:#fff}
+  .btn:active{transform:translateY(1px)}
+  .btn--brand{
+    background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
+    border-color:var(--glass-border)
+  }
+
+  /* Flags */
+  .nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
+  .nav__flags a{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;padding:4px;
+    backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+    transition:all .25s ease;
+  }
+  .nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
+  .flag{width:20px;height:14px;border-radius:3px;display:block}
+
+  /* Header */
+  header{padding:18vh 0 8vh;text-align:center}
+  header h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1.03;margin:0 0 14px}
+  header .sub{color:var(--muted);font-size:1rem;line-height:1.6;margin:0}
+
+  /* Main */
+  main{padding:20px 0 64px}
+  main h3{font-family:"Playfair Display",serif;text-align:center;margin:28px 0 12px;font-weight:800}
+  main p{max-width:900px;margin:0 auto 14px auto;line-height:1.7;color:#f3f6fa}
+  main p.center{text-align:center}
+
+  /* Contact band and logo */
+  .band__contact{text-align:center;padding:0}
+  .band__contact .btn{border-radius:999px}
+  .footer__logo{display:flex;justify-content:center;margin-top:24px;margin-bottom:0}
+  .footer__logo img{height:70px;opacity:.9;filter:drop-shadow(0 0 6px rgba(0,0,0,.3));transition:.3s}
+  .footer__logo img:hover{transform:scale(1.05);opacity:1}
+
+  /* Footer */
+  footer{text-align:center;color:#DFE9F6;padding:36px 0 20px}
+  .footer__links{display:flex;justify-content:center;gap:6px;font-weight:600;flex-wrap:wrap;margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html#home" class="brand">
+      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+    </a>
+    <div class="menu">
+      <a href="index.html#experiences" class="btn" data-i18n="nav.experiences">Experiences</a>
+      <a href="#" class="btn" data-mail="smart" data-i18n="nav.contact">Contact Us</a>
+      <a href="index.html#book" class="btn btn--brand" data-i18n="nav.book">Book Now</a>
+      <div class="nav__flags">
+        <a href="#" class="lang-flag" data-lang="en" aria-label="English" title="English">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="es" aria-label="Español" title="Español">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="pt" aria-label="Português (Brasil)" title="Português (Brasil)">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="ja" aria-label="日本語" title="日本語">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <h1 data-i18n="privacy.title">Privacy Policy</h1>
+    <p class="sub" data-i18n="privacy.sub">How we collect, use, and protect your information.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+  <h3 data-i18n="privacy.collect.title">Information We Collect</h3>
+  <p data-i18n="privacy.collect.p">We collect the details you share when you contact us or request a booking, such as your name, email, phone number, preferred dates, group size, tour edition, and any notes you choose to provide. Our website may also capture basic usage data (for example, cookies or analytics) to improve performance and usability.</p>
+  <h3 data-i18n="privacy.use.title">How We Use Your Information</h3>
+  <p data-i18n="privacy.use.p">We use your information to reply to inquiries, manage bookings, personalize the experience, and communicate updates or changes. We also analyze aggregate, non-identifying usage data to refine our services and website.</p>
+  <h3 data-i18n="privacy.sharing.title">Sharing</h3>
+  <p data-i18n="privacy.sharing.p">We do not sell your personal data. We may share limited details with trusted third parties only as needed to deliver your tour—for instance, transportation, ticketing, or venue partners—under appropriate confidentiality and security expectations.</p>
+  <h3 data-i18n="privacy.choices.title">Your Choices</h3>
+  <p data-i18n="privacy.choices.p">You may request access, correction, or deletion of your personal information by emailing <a href="mailto:info@miamitravelbureau.com">info@miamitravelbureau.com</a>. If you disable cookies in your browser, portions of the site may not function as intended.</p>
+  <h3 data-i18n="privacy.security.title">Data Security</h3>
+  <p data-i18n="privacy.security.p">We take reasonable administrative, technical, and physical safeguards to protect your information. However, no method of transmission or storage over the internet is completely secure, and we cannot guarantee absolute security.</p>
+  <h3 data-i18n="privacy.updates.title">Updates to This Policy</h3>
+  <p data-i18n="privacy.updates.p">We may update this Privacy Policy from time to time. The latest version will always be posted on this page and will indicate the effective date of changes.</p>
+  <h3 data-i18n="privacy.contact.title">Contact</h3>
+  <p class="center" data-i18n="privacy.contact.p">Questions about this Privacy Policy? Email <a href="mailto:info@miamitravelbureau.com">info@miamitravelbureau.com</a>.</p>
+</main>
+
+<!-- CONTACT BUTTON & LOGO SECTION -->
+<section id="contact" class="band__contact">
+  <div class="container">
+    <a href="#" class="btn" data-mail="smart" data-i18n="contact.cta">Contact Us</a>
+  </div>
+  <div class="footer__logo">
+    <img src="logo_kit/mtb-mark-white-1024.png" alt="Miami Travel Bureau logo" />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Miami Travel Bureau</div>
+    <div class="footer__links">
+      <a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a> |
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> |
+      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Set year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Translation dictionary
+const I18N = {
+  en:{
+    "nav.experiences":"Experiences","nav.contact":"Contact Us","nav.book":"Book Now",
+    "contact.cta":"Contact Us",
+    "footer.terms":"Terms & Conditions","footer.privacy":"Privacy Policy","footer.faq":"FAQ",
+    "privacy.title":"Privacy Policy","privacy.sub":"How we collect, use, and protect your information.",
+    "privacy.collect.title":"Information We Collect","privacy.collect.p":"We collect the details you share when you contact us or request a booking, such as your name, email, phone number, preferred dates, group size, tour edition, and any notes you choose to provide. Our website may also capture basic usage data (for example, cookies or analytics) to improve performance and usability.",
+    "privacy.use.title":"How We Use Your Information","privacy.use.p":"We use your information to reply to inquiries, manage bookings, personalize the experience, and communicate updates or changes. We also analyze aggregate, non-identifying usage data to refine our services and website.",
+    "privacy.sharing.title":"Sharing","privacy.sharing.p":"We do not sell your personal data. We may share limited details with trusted third parties only as needed to deliver your tour—for instance, transportation, ticketing, or venue partners—under appropriate confidentiality and security expectations.",
+    "privacy.choices.title":"Your Choices","privacy.choices.p":"You may request access, correction, or deletion of your personal information by emailing <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>. If you disable cookies in your browser, portions of the site may not function as intended.",
+    "privacy.security.title":"Data Security","privacy.security.p":"We take reasonable administrative, technical, and physical safeguards to protect your information. However, no method of transmission or storage over the internet is completely secure, and we cannot guarantee absolute security.",
+    "privacy.updates.title":"Updates to This Policy","privacy.updates.p":"We may update this Privacy Policy from time to time. The latest version will always be posted on this page and will indicate the effective date of changes.",
+    "privacy.contact.title":"Contact","privacy.contact.p":"Questions about this Privacy Policy? Email <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>.",
+  },
+  es:{
+    "nav.experiences":"Experiencias","nav.contact":"Contáctanos","nav.book":"Reservar Ahora",
+    "contact.cta":"Contáctanos",
+    "footer.terms":"Términos y Condiciones","footer.privacy":"Política de Privacidad","footer.faq":"Preguntas Frecuentes",
+    "privacy.title":"Política de Privacidad","privacy.sub":"Cómo recopilamos, usamos y protegemos tu información.",
+    "privacy.collect.title":"Información que Recopilamos","privacy.collect.p":"Recopilamos los datos que compartes al contactarnos o solicitar una reserva, como tu nombre, correo electrónico, número de teléfono, fechas preferidas, tamaño del grupo, edición del tour y cualquier nota que decidas proporcionar. Nuestro sitio web también puede capturar datos básicos de uso (por ejemplo, cookies o analíticas) para mejorar el rendimiento y la usabilidad.",
+    "privacy.use.title":"Cómo Usamos Tu Información","privacy.use.p":"Usamos tu información para responder consultas, gestionar reservas, personalizar la experiencia y comunicar actualizaciones o cambios. También analizamos datos de uso agregados y no identificativos para mejorar nuestros servicios y sitio web.",
+    "privacy.sharing.title":"Compartición","privacy.sharing.p":"No vendemos tus datos personales. Podemos compartir detalles limitados con terceros de confianza solo cuando sea necesario para realizar tu tour, por ejemplo, socios de transporte, boletos o lugares, bajo expectativas adecuadas de confidencialidad y seguridad.",
+    "privacy.choices.title":"Tus Opciones","privacy.choices.p":"Puedes solicitar acceso, corrección o eliminación de tu información personal enviando un correo a <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>. Si desactivas las cookies en tu navegador, partes del sitio pueden no funcionar como se espera.",
+    "privacy.security.title":"Seguridad de los Datos","privacy.security.p":"Tomamos medidas administrativas, técnicas y físicas razonables para proteger tu información. Sin embargo, ningún método de transmisión o almacenamiento en internet es completamente seguro y no podemos garantizar una seguridad absoluta.",
+    "privacy.updates.title":"Actualizaciones de Esta Política","privacy.updates.p":"Podemos actualizar esta Política de Privacidad de vez en cuando. La versión más reciente siempre estará publicada en esta página e indicará la fecha de entrada en vigor de los cambios.",
+    "privacy.contact.title":"Contacto","privacy.contact.p":"¿Preguntas sobre esta Política de Privacidad? Escribe a <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>.",
+  },
+  pt:{
+    "nav.experiences":"Experiências","nav.contact":"Fale Conosco","nav.book":"Reservar Agora",
+    "contact.cta":"Fale Conosco",
+    "footer.terms":"Termos e Condições","footer.privacy":"Política de Privacidade","footer.faq":"Perguntas Frequentes",
+    "privacy.title":"Política de Privacidade","privacy.sub":"Como coletamos, usamos e protegemos suas informações.",
+    "privacy.collect.title":"Informações que Coletamos","privacy.collect.p":"Coletamos os detalhes que você compartilha ao entrar em contato conosco ou solicitar uma reserva, como seu nome, e-mail, telefone, datas preferidas, tamanho do grupo, edição do tour e quaisquer notas que você escolher fornecer. Nosso site também pode capturar dados básicos de uso (por exemplo, cookies ou análises) para melhorar o desempenho e a usabilidade.",
+    "privacy.use.title":"Como Usamos Suas Informações","privacy.use.p":"Usamos suas informações para responder consultas, gerenciar reservas, personalizar a experiência e comunicar atualizações ou mudanças. Também analisamos dados agregados e não identificáveis para aprimorar nossos serviços e site.",
+    "privacy.sharing.title":"Compartilhamento","privacy.sharing.p":"Não vendemos seus dados pessoais. Podemos compartilhar detalhes limitados com terceiros confiáveis apenas quando necessário para realizar seu tour — por exemplo, parceiros de transporte, bilheteria ou locais — sob expectativas apropriadas de confidencialidade e segurança.",
+    "privacy.choices.title":"Suas Escolhas","privacy.choices.p":"Você pode solicitar acesso, correção ou exclusão das suas informações pessoais enviando um e-mail para <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>. Se desativar cookies no seu navegador, partes do site podem não funcionar como esperado.",
+    "privacy.security.title":"Segurança de Dados","privacy.security.p":"Tomamos medidas administrativas, técnicas e físicas razoáveis para proteger suas informações. Porém, nenhum método de transmissão ou armazenamento na internet é totalmente seguro, e não podemos garantir segurança absoluta.",
+    "privacy.updates.title":"Atualizações desta Política","privacy.updates.p":"Podemos atualizar esta Política de Privacidade periodicamente. A versão mais recente sempre será publicada nesta página e indicará a data de vigência das alterações.",
+    "privacy.contact.title":"Contato","privacy.contact.p":"Dúvidas sobre esta Política de Privacidade? Envie um e-mail para <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>.",
+  },
+  ja:{
+    "nav.experiences":"エクスペリエンス","nav.contact":"お問い合わせ","nav.book":"予約する",
+    "contact.cta":"お問い合わせ",
+    "footer.terms":"利用規約","footer.privacy":"プライバシーポリシー","footer.faq":"よくある質問",
+    "privacy.title":"プライバシーポリシー","privacy.sub":"情報の収集、使用、保護方法について",
+    "privacy.collect.title":"収集する情報","privacy.collect.p":"お問い合わせや予約リクエストの際に、お名前、メールアドレス、電話番号、ご希望の日付、グループの人数、ツアーエディション、その他ご記入いただくメモなどの詳細を収集します。また、サイトのパフォーマンスと使いやすさを向上させるため、クッキーや分析などの基本的な利用データを取得する場合があります。",
+    "privacy.use.title":"情報の利用方法","privacy.use.p":"お問い合わせへの返信、予約管理、体験のパーソナライズ、更新や変更の通知のために情報を使用します。また、非識別の集計利用データを分析し、サービスやウェブサイトを改善します。",
+    "privacy.sharing.title":"情報の共有","privacy.sharing.p":"個人データを販売することはありません。ツアーの実施に必要な場合に限り、信頼できる第三者（交通手配、チケット発行、会場など）と限られた情報を共有することがあります。その際は適切な機密保持と安全対策を講じます。",
+    "privacy.choices.title":"選択肢","privacy.choices.p":"ご自身の個人情報へのアクセス、修正、削除を希望する場合は、<a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a> までご連絡ください。ブラウザでクッキーを無効にすると、サイトの一部が正しく機能しないことがあります。",
+    "privacy.security.title":"データの安全性","privacy.security.p":"合理的な管理的、技術的、物理的な対策を講じて情報を保護しています。しかし、インターネット上での送信や保存方法は完全に安全ではなく、絶対的な安全を保証することはできません。",
+    "privacy.updates.title":"本ポリシーの更新","privacy.updates.p":"プライバシーポリシーを随時更新することがあります。最新のバージョンは常にこのページに掲載され、変更の発効日を示します。",
+    "privacy.contact.title":"お問い合わせ","privacy.contact.p":"このプライバシーポリシーに関するご質問は、<a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a> までメールでお問い合わせください。",
+  }
+};
+
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(!(key in dict)) return;
+    const val = dict[key];
+    if(/<\/?[a-z][\s\S]*>/i.test(val)) el.innerHTML = val;
+    else el.textContent = val;
+  });
+  document.documentElement.lang = lang;
+}
+
+document.querySelectorAll('.lang-flag').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    setLang(a.dataset.lang);
+  });
+});
+
+// initialize default language
+setLang('en');
+
+// smart mailto trigger
+document.querySelectorAll('[data-mail="smart"]').forEach(el=>{
+  el.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const to='info@miamitravelbureau.com';
+    const subject=encodeURIComponent('Miami Travel Bureau Inquiry');
+    const body=encodeURIComponent('Hello Lee,\n\nI’m interested in booking a Miami experience. Could you please provide more details?\n\nThank you!');
+    window.location.href=`mailto:${to}?subject=${subject}&body=${body}`;
+  });
+});
+</script>
+</body>
+</html>

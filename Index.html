@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Miami Travel Bureau — Miami Essentials Experiences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
+<meta name="theme-color" content="#0F3C6B" />
+<style>
+:root{
+  --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
+  --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
+  --glass-border:rgba(255,255,255,.30);--shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92vw);margin-inline:auto}
+
+/* Background */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
+  filter:brightness(.9) saturate(1.05);transform:scale(1.02);
+}
+
+/* Scroll behavior */
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{scroll-snap-type:y mandatory}
+section,header.hero{min-height:98vh;scroll-snap-align:start;scroll-snap-stop:always}
+section{padding:72px 0}
+
+/* Navbar */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
+  backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+  box-shadow:var(--shadow);
+}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;margin-left:60px}
+.brand__mark{height:48px;width:auto}
+.brand__text{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;font-size:22px}
+.menu{display:flex;gap:8px;align-items:center;margin-left:auto;padding-right:40px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+  font-weight:700;font-size:.9rem;color:#fff;background:var(--glass-fill);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+  box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
+}
+.btn:hover{background:var(--glass-fill-hover);border-color:#fff}
+.btn:active{transform:translateY(1px)}
+.btn--brand{
+  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
+  border-color:var(--glass-border)
+}
+
+/* Flags */
+.nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
+.nav__flags a{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:4px;
+  backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+  transition:all .25s ease;
+}
+.nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
+.flag{width:20px;height:14px;border-radius:3px;display:block}
+
+/* Hero */
+.hero{padding:18vh 0 14vh;text-align:center}
+h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1.03;margin:12px 0 18px}
+.lead{max-width:720px;color:#F4F8FD;font-size:18px;line-height:1.8;margin:auto}
+.cta-row{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;justify-content:center}
+
+/* About */
+#about{padding:80px 0}
+#about .about-glass{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  border-radius:24px;border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 8px 32px rgba(0,0,0,.4);padding:48px;max-width:900px;margin:auto;color:#fff;text-align:left;
+}
+#about h2{text-align:center;margin-bottom:20px;font-family:"Playfair Display",serif;font-weight:800}
+#about p{font-size:1.05rem;line-height:1.7;margin-bottom:18px;color:#f3f6fa}
+
+/* Experiences */
+#experiences .container{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  border-radius:24px;border:1px solid rgba(255,255,255,.25);padding:48px;box-shadow:0 8px 32px rgba(0,0,0,.4)
+}
+#experiences h2,#experiences .sub{text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:24px}
+.card{background:rgba(22,78,139,.28);border:1px solid var(--glass-border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.card__media{height:190px;background:rgba(0,0,0,.25);overflow:hidden}
+.card__media img{width:100%;height:100%;object-fit:cover}
+.card__body{padding:18px}
+.title{font-weight:800;font-size:22px;margin:6px 0}
+.meta{color:var(--muted);font-size:14px;font-weight:800}
+.list{margin:14px 0;padding-left:18px}
+.list li{margin:8px 0;color:#F2F7FD}
+.card__foot{padding:16px}
+.card .btn{position:relative;left:50%;transform:translateX(-50%);margin-top:12px}
+.price{display:none!important}
+
+/* Build Your Own */
+#custom { scroll-margin-top: 120px; padding: 72px 0 60px; }
+
+.byo-head { text-align: center; margin-bottom: 20px; }
+.byo-title{
+  font-family:"Playfair Display",serif;
+  font-weight:800;
+  font-size: clamp(28px,4.2vw,48px);
+  line-height:1.06;
+  color:#fff;
+  margin:0 0 6px;
+  text-shadow: 0 2px 16px rgba(0,0,0,.35);
+}
+.byo-sub{
+  color: var(--muted, #dfe9f6);
+  opacity:.95;
+  margin:0 auto 8px;
+  max-width: 780px;
+}
+
+.byo-grid{ width:min(1080px,94vw); margin: 0 auto; }
+.byo-field { margin: 22px 0 14px; border:0; padding:0; }
+.byo-legend{
+  font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+  font-size:.85rem; color:var(--muted,#dfe9f6); margin-bottom:10px;
+}
+
+.byo-chips{ display:flex; flex-wrap:wrap; gap:10px; }
+.chip{
+  border-radius:999px;
+  padding:10px 14px;
+  border:1px solid var(--glass-border, rgba(255,255,255,.22));
+  background: var(--glass, linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06)));
+  -webkit-backdrop-filter: blur(6px) saturate(140%); backdrop-filter: blur(6px) saturate(140%);
+  color:#fff; font-weight:700;
+  transition:transform .06s ease, background .2s ease, border-color .2s ease;
+}
+.chip:hover{ transform: translateY(-1px); }
+.chip.is-active{
+  background: var(--glass-fill, linear-gradient(180deg, rgba(22,78,139,.22), rgba(15,60,107,.40)));
+  border-color: transparent;
+}
+
+.byo-radio {display: flex; gap: 24px; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+}
+.byo-radio label{ display:flex; align-items:center; gap:10px; color:#fff; }
+.byo-radio input{ accent-color:#fff; }
+
+.byo-two{
+  display:grid; gap:12px; grid-template-columns: 1fr 1fr;
+}
+@media (max-width:760px){ .byo-two{ grid-template-columns:1fr; } }
+
+.byo-label{ display:grid; gap:6px; color:#fff; margin:12px 0; }
+.byo-input{
+  border-radius:14px; padding:12px 14px;
+  border:1px solid var(--glass-border, rgba(255,255,255,.22));
+  background: var(--glass, linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06)));
+  -webkit-backdrop-filter: blur(8px) saturate(140%); backdrop-filter: blur(8px) saturate(140%);
+  color:#fff; outline:none; width:100%;
+}
+.byo-input::placeholder{ color:rgba(255,255,255,.75); }
+.byo-input:focus{ border-color:#fff; }
+
+.byo-actions{
+  display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+  margin: 8px 0 4px;
+}
+.byo-summary{
+  margin-top: 8px;
+  color: var(--muted,#dfe9f6);
+  font-size:.95rem;
+}
+/* Contact */
+.band__contact{text-align:center;padding:0}
+.band__contact .btn{border-radius:999px}
+.contact-info{margin-top:24px;text-align:center;color:#DFE9F6;line-height:1.8}
+.contact-details a{color:#fff;text-decoration:none;font-weight:700}
+.contact-details a:hover{color:#8bc4ff}
+
+/* Footer */
+/* ↓↓↓ ONLY CHANGE HERE FOR SPACING ↓↓↓ */
+/* Remove all vertical gap between logo and footer */
+.footer__logo{
+  display:flex;
+  justify-content:center;
+  Margin-top:0px;
+  margin-bottom:0;
+}
+
+.footer__logo img{
+  height:70px;
+  opacity:.9;
+  filter:drop-shadow(0 0 6px rgba(0,0,0,.3));
+  transition:.3s;
+}
+
+.footer__logo img:hover{
+  transform:scale(1.05);
+  opacity:1;
+}
+
+/* Footer spacing tightened */
+footer{
+  text-align:center;
+  color:#DFE9F6;
+  /* remove top padding so the footer content meets the logo directly */
+  padding:0 0 20px;
+}
+
+.footer__links{
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  font-weight:600;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+
+
+/* Section spacing adjustments */
+#experiences{margin-bottom:150px!important}
+#custom{margin-bottom:20px!important;
+  /* shrink Build Your Own section height to content size rather than full screen */
+  min-height:auto;
+  scroll-snap-align:unset;
+  scroll-snap-stop:normal;
+  /* reduce bottom padding so contact sits closer */
+  padding-bottom:20px;
+}
+.band__contact{margin-top:0!important;margin-bottom:24px!important}
+
+/* Additional spacing adjustments for contact & footer */
+#contact{
+  /* override default section height and snapping to shrink vertical space */
+  min-height:auto;
+  scroll-snap-align:unset;
+  scroll-snap-stop:normal;
+  /* remove extra vertical padding so content hugs footer */
+  padding:8px 0 0;
+}
+
+/* Tighten contact band and logo spacing */
+.band__contact{margin-top:0!important;margin-bottom:0!important}
+.footer__logo{margin-top:72px;margin-bottom:0}
+
+/* Reduce space above contact details */
+.contact-info{margin-top:8px;margin-bottom:0}
+
+/* Remove gap between copyright and footer links */
+.footer__links{margin-top:0}
+.band__contact{
+  /* eliminate extra margin below contact info */
+  margin-bottom:0!important;
+}
+
+/* Booking modal */
+#book-modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.35);z-index:9999}
+#book-modal.open{display:grid}
+.book-modal__panel{
+  width:min(560px,92vw);
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(22,78,139,.18));
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  border:1px solid rgba(255,255,255,.18);box-shadow:0 20px 40px rgba(0,0,0,.35);
+  border-radius:18px;padding:22px;color:#fff;text-align:center;
+}
+#book-title{margin:0 0 12px;font-family:"Playfair Display",serif;font-weight:800;font-size:24px}
+.book__label{display:grid;gap:6px;margin:10px 0}
+.book__label span{font-weight:700;color:#dfe9f6;letter-spacing:.02em}
+#book-form input{border-radius:14px;padding:12px 14px;border:1px solid rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));color:#fff;outline:none;width:100%;backdrop-filter:blur(8px) saturate(140%)}
+#book-form input::placeholder{color:rgba(255,255,255,.75)}
+#book-form input:focus{border-color:#fff}
+.book__actions{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#home" class="brand">
+      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+    </a>
+
+    <div class="menu">
+      <a href="#experiences" class="btn" data-i18n="nav.experiences">Experiences</a>
+      <a href="#" class="btn" data-mail="smart" data-i18n="nav.contact">Contact Us</a>
+      <a href="#book" class="btn btn--brand" data-i18n="nav.book">Book Now</a>
+
+      <div class="nav__flags">
+        <a href="#" class="lang-flag" data-lang="en" aria-label="English" title="English">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="es" aria-label="Español" title="Español">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="pt" aria-label="Português (Brasil)" title="Português (Brasil)">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="ja" aria-label="日本語" title="日本語">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero" role="banner">
+  <div class="container">
+    <h1 data-i18n="hero.title">Miami made for you, authentic, stylish, unforgettable.</h1>
+    <p class="lead" data-i18n="hero.lead">Choose from curated half-day experiences or build your own.</p>
+    <div class="cta-row">
+      <a href="#experiences" class="btn btn--brand" data-i18n="hero.ctaExplore">Explore Experiences</a>
+      <a href="#book" class="btn" data-i18n="hero.ctaRequest">Request Dates</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-glass">
+    <h2 data-i18n="about.title">About Us</h2>
+    <p data-i18n="about.p1">Welcome to <strong>Miami Travel Bureau</strong>.</p>
+    <p data-i18n="about.p2">A locally rooted boutique travel experience company that blends Miami’s vibrant culture, street art, and coastal lifestyle into unforgettable half-day adventures. </p>
+    <p data-i18n="about.p3">Founded by <strong>Lee</strong>, a multilingual tour designer and cultural concierge originally from Cuba, who have spent over a decade helping visitors see Miami the way locals do.</p>
+    <p>
+    <p data-i18n="about.p4">Our goal is simple: to turn travel into meaningful connection. From Wynwood murals to Little Havana cafecitos, every experience is handcrafted to show you the soul of the city, not just its skyline.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences">
+  <div class="container">
+    <h2 data-i18n="exp.title">Choose Your Experience</h2>
+    <p class="sub" data-i18n="exp.sub">All editions run 10:00–15:00.</p>
+
+    <div class="cards" role="list">
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="hector-falcon-pzb9xmBe_wM-unsplash.jpg" alt=""></div>
+        <div class="card__body">
+          <h3 class="title" data-i18n="exp.sobe.title">A Glance of Miami Beach</h3>
+          <ul class="list">
+            <li data-i18n="exp.sobe.l1">South Beach drive around</li>
+            <li data-i18n="exp.sobe.l2">South Pointe Park</li>
+            <li data-i18n="exp.sobe.l3">Lunch</li>
+            <li data-i18n="exp.sobe.l4">Ocean Drive stroll + cafecito</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="#book" class="btn btn--brand" data-book data-i18n="exp.book">Book</a>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="daniel-Xj-MnOm0vWw-unsplash.jpg" alt=""></div>
+        <div class="card__body">
+          <h3 class="title" data-i18n="exp.art.title">For Creatives & Culture Lovers</h3>
+          <ul class="list">
+            <li data-i18n="exp.art.l1">Deep-dive Wynwood walk</li>
+            <li data-i18n="exp.art.l2">Wynwood Walls Museum,</li>
+            <li data-i18n="exp.art.l3">Gallery stop</li>
+            <li data-i18n="exp.art.l4">Lunch</li>
+            <li data-i18n="exp.art.l5">Spray painting activity</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="#book" class="btn btn--brand" data-book data-i18n="exp.book">Book</a>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="naomi-tamar-6QZv3ziE5wg-unsplash.jpg" alt=""></div>
+        <div class="card__body">
+          <h3 class="title" data-i18n="exp.mosaic.title">The Miami Mosaic</h3>
+          <ul class="list">
+            <li data-i18n="exp.mosaic.l1">Panoramic SoBe overview</li>
+            <li data-i18n="exp.mosaic.l2">Design District & Wynwood</li>
+            <li data-i18n="exp.mosaic.l3">Little Havana stroll + cafecito</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="#book" class="btn btn--brand" data-book data-i18n="exp.book">Book</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="band__contact">
+    <a href="#" class="btn" data-mail="smart" data-i18n="contact.cta">Contact Us</a>
+    <div class="contact-info">
+      <p class="contact-text" data-i18n="contact.text">Get in touch for private tours, collaborations, or custom experiences.</p>
+      <p class="contact-details">
+        <span data-i18n="contact.emailLabel">Email</span>:
+        <a href="mailto:info@miamitravelbureau.com">info@miamitravelbureau.com</a><br>
+        WhatsApp:
+        <a href="https://wa.me/13212223560" target="_blank">+1 (321) 222-3560</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer__logo">
+    <img src="logo_kit/mtb-mark-white-1024.png" alt="Miami Travel Bureau logo" />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Miami Travel Bureau — Miami Essentials</div>
+    <div class="footer__links" aria-label="Legal">
+      <a href="terms.html" data-i18n="footer.terms">Terms & Conditions</a> |
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> |
+      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div id="book-modal" aria-hidden="true">
+  <div class="book-modal__panel" role="dialog" aria-modal="true" aria-labelledby="book-title">
+    <h3 id="book-title" data-i18n="modal.title">Booking Request</h3>
+    <form id="book-form">
+      <label class="book__label">
+        <span data-i18n="modal.exp">Experience</span>
+        <input id="book-experience" name="experience" type="text" readonly>
+      </label>
+      <label class="book__label">
+        <span data-i18n="modal.date">Date</span>
+        <input id="book-date" name="date" type="date" required>
+      </label>
+      <label class="book__label">
+        <span data-i18n="modal.people">People</span>
+        <input id="book-people" name="people" type="number" min="1" max="12" value="2" required>
+      </label>
+      <div class="book__actions">
+        <button type="button" id="book-cancel" class="btn" data-i18n="modal.cancel">Cancel</button>
+        <button type="submit" class="btn btn--brand" data-i18n="modal.send">Send Request</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+/* Year */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Book modal logic */
+(() => {
+  const $ = (s, r=document)=>r.querySelector(s);
+  const $$ = (s, r=document)=>[...r.querySelectorAll(s)];
+  const enc = encodeURIComponent;
+  const TO = "info@miamitravelbureau.com";
+
+  const modal = $("#book-modal");
+  const form  = $("#book-form");
+  const fExp  = $("#book-experience");
+  const fDate = $("#book-date");
+  const fPeople = $("#book-people");
+  const btnCancel = $("#book-cancel");
+
+  const tomorrowISO = () => { const d=new Date(); d.setDate(d.getDate()+1); return d.toISOString().slice(0,10); };
+  fDate.value = tomorrowISO();
+
+  const openM = () => { modal.classList.add("open"); modal.setAttribute("aria-hidden","false"); };
+  const closeM = () => { modal.classList.remove("open"); modal.setAttribute("aria-hidden","true"); };
+
+  btnCancel.addEventListener("click", closeM);
+  modal.addEventListener("click", e => { if(e.target===modal) closeM(); });
+
+  const books = $$(".card .btn, [data-book]");
+  books.forEach(b=>{
+    b.addEventListener("click", e=>{
+      e.preventDefault();
+      const card=b.closest(".card");
+      const title=card?.querySelector(".title")?.textContent.trim()||"Miami Experience";
+      fExp.value=title;
+      if(!fDate.value) fDate.value = tomorrowISO();
+      openM();
+    });
+  });
+
+  form.addEventListener("submit", e=>{
+    e.preventDefault();
+    const subject = `Booking request: ${fExp.value} on ${fDate.value}`;
+    const body = `Hello Lee,%0D%0A%0D%0AI'd like to request a booking.%0D%0A%0D%0AExperience: ${enc(fExp.value)}%0D%0ADate: ${enc(fDate.value)}%0D%0APeople: ${enc(fPeople.value)}%0D%0A%0D%0AThank you!`;
+    window.location.href = `mailto:${TO}?subject=${enc(subject)}&body=${body}`;
+    closeM();
+  });
+})();
+
+/* Simple i18n – FIXED STRUCTURE */
+const I18N = {
+  en:{
+    "nav.experiences":"Experiences","nav.contact":"Contact Us","nav.book":"Book Now",
+    "hero.title":"Miami made for you, authentic, stylish, unforgettable.",
+    "hero.lead":"Choose from curated half-day experiences or build your own.",
+    "hero.ctaExplore":"Explore Experiences","hero.ctaRequest":"Request Dates",
+    "about.title":"About Us","about.p1":"Welcome to <strong>Miami Travel Bureau</strong>.",
+    "about.p2":"A locally rooted boutique travel experience company that blends Miami’s vibrant culture, street art, and coastal lifestyle into unforgettable half-day adventures.",
+    "about.p3":"Founded by <strong>Lee</strong>, a multilingual tour designer and cultural concierge originally from Cuba, who have spent over a decade helping visitors see Miami the way locals do.",
+    "exp.title":"Choose Your Experience","exp.sub":"All editions run 10:00–14:00.",
+    "exp.sobe.title":"A Glance of Miami Beach","exp.sobe.l1":"South Beach drive around","exp.sobe.l2":"South Pointe Park","exp.sobe.l3":"Lunch","exp.sobe.l4":"Ocean Drive stroll + cafecito",
+    "exp.art.title":"For Creatives & Culture Lovers","exp.art.l1":"Deep-dive Wynwood walk","exp.art.l2":"Museum of Graffiti visit","exp.art.l3":"Gallery stop","exp.art.l4":"Lunch","exp.art.l5":"Spray painting activity",
+    "exp.mosaic.title":"The Miami Mosaic","exp.mosaic.l1":"Panoramic SoBe overview","exp.mosaic.l2":"Design District & Wynwood","exp.mosaic.l3":"Little Havana stroll + cafecito",
+    "exp.book":"Book",
+    "byo.title":"Build Your Own","byo.sub":"Curate your perfect Miami day — pick the vibe, time, and extras. We’ll tailor the details.",
+    "byo.vibes.label":"Choose your vibe","byo.vibes.v1":"Beach Reset","byo.vibes.v2":"Street Art & Galleries","byo.vibes.v3":"Little Havana Culture",
+    "byo.duration.label":"Duration","byo.duration.d1":"Half-day (10:00–14:00)","byo.duration.d2":"Sunset (16:00–20:00)","byo.duration.d3":"Full-day (10:00–18:00)",
+    "byo.request":"Request My Custom Plan","byo.clear":"Clear",
+    "contact.cta":"Contact Us","contact.text":"Get in touch for private tours, collaborations, or custom experiences.","contact.emailLabel":"Email",
+    "footer.terms":"Terms & Conditions","footer.privacy":"Privacy Policy","footer.faq":"FAQ",
+    "modal.title":"Booking Request","modal.exp":"Experience","modal.date":"Date","modal.people":"People","modal.cancel":"Cancel","modal.send":"Send Request"
+  },
+  es:{
+    "nav.experiences":"Experiencias","nav.contact":"Contáctanos","nav.book":"Reservar Ahora",
+    "hero.title":"Miami hecha para ti: auténtica, elegante e inolvidable.",
+    "hero.lead":"Elige entre experiencias de medio día o crea la tuya propia.",
+    "hero.ctaExplore":"Ver Experiencias","hero.ctaRequest":"Solicitar Fechas",
+    "about.title":"Sobre Nosotros","about.p1":"Bienvenido a <strong>Miami Travel Bureau</strong>.",
+    "about.p2":"Una agencia boutique de experiencias locales que combina la cultura vibrante, el arte callejero y el estilo costero de Miami en aventuras inolvidables de medio día.",
+    "about.p3":"Fundada por <strong>Lee</strong>, diseñador de tours y concierge cultural multilingüe originario de Cuba, con más de una década mostrando Miami como lo hacen los locales.",
+    "about.p4":"Nuestro objetivo es simple: convertir el viaje en una conexión significativa. Desde los murales de Wynwood hasta los cafecitos de La Pequeña Habana, cada experiencia muestra el alma de la ciudad, no solo su horizonte.",
+    "exp.title":"Elige Tu Experiencia","exp.sub":"Todas las ediciones son de 10:00 a 14:00.",
+    "exp.sobe.title":"Una Mirada a Miami Beach","exp.sobe.l1":"Recorrido en auto por South Beach","exp.sobe.l2":"South Pointe Park","exp.sobe.l3":"Almuerzo","exp.sobe.l4":"Paseo por Ocean Drive + cafecito",
+    "exp.art.title":"Para Amantes del Arte y la Cultura","exp.art.l1":"Recorrido profundo por Wynwood","exp.art.l2":"Visita al Museo del Graffiti","exp.art.l3":"Parada en galería","exp.art.l4":"Almuerzo","exp.art.l5":"Actividad de pintura con aerosol",
+    "exp.mosaic.title":"El Mosaico de Miami","exp.mosaic.l1":"Vista panorámica de South Beach","exp.mosaic.l2":"Design District y Wynwood","exp.mosaic.l3":"Paseo por La Pequeña Habana + cafecito",
+    "exp.book":"Reservar",
+    "byo.title":"Crea Tu Propia Experiencia","byo.sub":"Diseña tu día perfecto en Miami: elige el ambiente, el horario y los extras. Nosotros nos encargamos del resto.",
+    "byo.vibes.label":"Elige tu ambiente","byo.vibes.v1":"Relax en la Playa","byo.vibes.v2":"Arte Callejero y Galerías","byo.vibes.v3":"Cultura de La Pequeña Habana",
+    "byo.duration.label":"Duración","byo.duration.d1":"Medio día (10:00–14:00)","byo.duration.d2":"Atardecer (16:00–20:00)","byo.duration.d3":"Día completo (10:00–18:00)",
+    "byo.request":"Solicitar Mi Plan Personalizado","byo.clear":"Borrar",
+    "contact.cta":"Contáctanos","contact.text":"Comunícate para tours privados, colaboraciones o experiencias personalizadas.","contact.emailLabel":"Correo Electrónico",
+    "footer.terms":"Términos y Condiciones","footer.privacy":"Política de Privacidad","footer.faq":"Preguntas Frecuentes",
+    "modal.title":"Solicitud de Reserva","modal.exp":"Experiencia","modal.date":"Fecha","modal.people":"Personas","modal.cancel":"Cancelar","modal.send":"Enviar Solicitud"
+  },
+  pt:{
+    "nav.experiences":"Experiências","nav.contact":"Fale Conosco","nav.book":"Reservar Agora",
+    "hero.title":"Miami feita para você: autêntica, elegante e inesquecível.",
+    "hero.lead":"Escolha entre experiências de meio dia ou crie a sua própria.",
+    "hero.ctaExplore":"Ver Experiências","hero.ctaRequest":"Solicitar Datas",
+    "about.title":"Sobre Nós","about.p1":"Bem-vindo à <strong>Miami Travel Bureau</strong>.",
+    "about.p2":"Uma empresa boutique local que combina a cultura vibrante, a arte de rua e o estilo costeiro de Miami em aventuras inesquecíveis de meio dia.",
+    "about.p3":"Fundada por <strong>Lee</strong>, designer de passeios e concierge cultural multilíngue, natural de Cuba, com mais de dez anos mostrando o verdadeiro Miami aos visitantes.",
+    "about.p4":"Nosso objetivo é simples: transformar viagens em conexões significativas. Dos murais de Wynwood aos cafecitos da Little Havana, cada experiência mostra a alma da cidade, não apenas seu horizonte.",
+    "exp.title":"Escolha Sua Experiência","exp.sub":"Todas as edições acontecem das 10:00 às 14:00.",
+    "exp.sobe.title":"Um Olhar sobre Miami Beach","exp.sobe.l1":"Passeio de carro por South Beach","exp.sobe.l2":"South Pointe Park","exp.sobe.l3":"Almoço","exp.sobe.l4":"Passeio por Ocean Drive + cafecito",
+    "exp.art.title":"Para Amantes de Arte e Cultura","exp.art.l1":"Caminhada profunda por Wynwood","exp.art.l2":"Visita ao Museu do Grafite","exp.art.l3":"Parada em galeria","exp.art.l4":"Almoço","exp.art.l5":"Atividade de pintura com spray",
+    "exp.mosaic.title":"O Mosaico de Miami","exp.mosaic.l1":"Vista panorâmica de South Beach","exp.mosaic.l2":"Design District e Wynwood","exp.mosaic.l3":"Passeio por Little Havana + cafecito",
+    "exp.book":"Reservar",
+    "byo.title":"Monte Sua Própria Experiência","byo.sub":"Crie o seu dia perfeito em Miami — escolha o estilo, o horário e os extras. Nós cuidamos do resto.",
+    "byo.vibes.label":"Escolha seu estilo","byo.vibes.v1":"Relax na Praia","byo.vibes.v2":"Arte de Rua e Galerias","byo.vibes.v3":"Cultura de Little Havana",
+    "byo.duration.label":"Duração","byo.duration.d1":"Meio dia (10:00–14:00)","byo.duration.d2":"Pôr do sol (16:00–20:00)","byo.duration.d3":"Dia inteiro (10:00–18:00)",
+    "byo.request":"Solicitar Meu Plano Personalizado","byo.clear":"Limpar",
+    "contact.cta":"Fale Conosco","contact.text":"Entre em contato para tours privados, colaborações ou experiências sob medida.","contact.emailLabel":"E-mail",
+    "footer.terms":"Termos e Condições","footer.privacy":"Política de Privacidade","footer.faq":"Perguntas Frequentes",
+    "modal.title":"Pedido de Reserva","modal.exp":"Experiência","modal.date":"Data","modal.people":"Pessoas","modal.cancel":"Cancelar","modal.send":"Enviar Pedido"
+  },
+  ja:{
+    "nav.experiences":"エクスペリエンス","nav.contact":"お問い合わせ","nav.book":"予約する",
+    "hero.title":"あなたのためのマイアミ。洗練され、本物で、忘れられない。",
+    "hero.lead":"厳選された半日ツアーから選ぶか、自分だけのプランを作りましょう。",
+    "hero.ctaExplore":"ツアーを見る","hero.ctaRequest":"日程をリクエスト",
+    "about.title":"弊社について","about.p1":"<strong>マイアミ・トラベル・ビューロー</strong>へようこそ。",
+    "about.p2":"マイアミの文化、ストリートアート、そして海辺のライフスタイルを融合させた、地元発のブティック旅行会社です。",
+    "about.p3":"創設者の<strong>リー</strong>は、キューバ出身の多言語ツアーデザイナー兼カルチャーコンシェルジュで、10年以上にわたり旅行者に“地元のマイアミ”を案内してきました。",
+    "about.p4":"弊社の目的はシンプルです。旅を“つながり”に変えること。ウィンウッドの壁画からリトルハバナのカフェシートまで、マイアミの本当の魂を感じていただけます。",
+    "exp.title":"ツアーを選ぶ","exp.sub":"すべてのツアーは10:00〜14:00に開催されます。",
+    "exp.sobe.title":"マイアミビーチを感じる","exp.sobe.l1":"サウスビーチ ドライブ","exp.sobe.l2":"サウスポイントパーク","exp.sobe.l3":"ランチ","exp.sobe.l4":"オーシャンドライブ散歩 + カフェシート",
+    "exp.art.title":"アートとカルチャーを愛する方へ","exp.art.l1":"ウィンウッド街歩き","exp.art.l2":"グラフィティ美術館訪問","exp.art.l3":"ギャラリー見学","exp.art.l4":"ランチ","exp.art.l5":"スプレーペイント体験",
+    "exp.mosaic.title":"マイアミ・モザイク","exp.mosaic.l1":"サウスビーチ全景","exp.mosaic.l2":"デザイン地区とウィンウッド","exp.mosaic.l3":"リトルハバナ散歩 + カフェシート",
+    "exp.book":"予約",
+    "byo.title":"自分だけのツアーを作る","byo.sub":"理想のマイアミをデザインしましょう。雰囲気、時間、体験を選んでください。",
+    "byo.vibes.label":"雰囲気を選ぶ","byo.vibes.v1":"ビーチリラックス","byo.vibes.v2":"ストリートアート & ギャラリー","byo.vibes.v3":"リトルハバナ文化",
+    "byo.duration.label":"所要時間","byo.duration.d1":"半日 (10:00–14:00)","byo.duration.d2":"サンセット (16:00–20:00)","byo.duration.d3":"1日 (10:00–18:00)",
+    "byo.request":"プランをリクエスト","byo.clear":"クリア",
+    "contact.cta":"お問い合わせ","contact.text":"プライベートツアー、コラボレーション、カスタム体験についてご連絡ください。","contact.emailLabel":"メール",
+    "footer.terms":"利用規約","footer.privacy":"プライバシーポリシー","footer.faq":"よくある質問",
+    "modal.title":"予約リクエスト","modal.exp":"エクスペリエンス","modal.date":"日付","modal.people":"人数","modal.cancel":"キャンセル","modal.send":"送信"
+  }
+};
+
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(!(key in dict)) return;
+    const val = dict[key];
+    if(/<\/?[a-z][\s\S]*>/i.test(val)) el.innerHTML = val;
+    else el.textContent = val;
+  });
+  document.documentElement.lang = lang;
+}
+
+document.querySelectorAll(".lang-flag").forEach(a=>{
+  a.addEventListener("click", e=>{
+    e.preventDefault();
+    setLang(a.dataset.lang);
+  });
+});
+
+// default
+setLang("en");
+
+/* Smart email chooser trigger (simple mailto) */
+document.querySelectorAll('[data-mail="smart"]').forEach(el=>{
+  el.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const to="info@miamitravelbureau.com";
+    const subject=encodeURIComponent("Miami Travel Bureau Inquiry");
+    const body=encodeURIComponent("Hello Lee,\n\nI’m interested in booking a Miami experience. Could you please provide more details?\n\nThank you!");
+    window.location.href=`mailto:${to}?subject=${subject}&body=${body}`;
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms &amp; Conditions — Miami Travel Bureau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
+<meta name="theme-color" content="#0F3C6B" />
+<style>
+  :root{
+    --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
+    --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
+    --glass-border:rgba(255,255,255,.30);--shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{width:min(1120px,92vw);margin-inline:auto}
+
+  /* Background */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;
+    background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
+    filter:brightness(.9) saturate(1.05);transform:scale(1.02);
+  }
+
+  /* Navbar */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
+    backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+    box-shadow:var(--shadow);
+  }
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:12px;margin-left:60px}
+  .brand__mark{height:48px;width:auto}
+  .brand__text{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;font-size:22px}
+  .menu{display:flex;gap:8px;align-items:center;margin-left:auto;padding-right:40px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+    font-weight:700;font-size:.9rem;color:#fff;background:var(--glass-fill);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+    box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
+  }
+  .btn:hover{background:var(--glass-fill-hover);border-color:#fff}
+  .btn:active{transform:translateY(1px)}
+  .btn--brand{
+    background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
+    border-color:var(--glass-border)
+  }
+
+  /* Flags */
+  .nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
+  .nav__flags a{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;padding:4px;
+    backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+    transition:all .25s ease;
+  }
+  .nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
+  .flag{width:20px;height:14px;border-radius:3px;display:block}
+
+  /* Header */
+  header{padding:18vh 0 8vh;text-align:center}
+  header h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1.03;margin:0 0 14px}
+  header .sub{color:var(--muted);font-size:1rem;line-height:1.6;margin:0}
+
+  /* Main */
+  main{padding:20px 0 64px}
+  main h3{font-family:"Playfair Display",serif;text-align:center;margin:28px 0 12px;font-weight:800}
+  main p{max-width:900px;margin:0 auto 14px auto;line-height:1.7;color:#f3f6fa}
+  main p.center{text-align:center}
+
+  /* Contact band and logo */
+  .band__contact{text-align:center;padding:0}
+  .band__contact .btn{border-radius:999px}
+  .footer__logo{display:flex;justify-content:center;margin-top:24px;margin-bottom:0}
+  .footer__logo img{height:70px;opacity:.9;filter:drop-shadow(0 0 6px rgba(0,0,0,.3));transition:.3s}
+  .footer__logo img:hover{transform:scale(1.05);opacity:1}
+
+  /* Footer */
+  footer{text-align:center;color:#DFE9F6;padding:36px 0 20px}
+  .footer__links{display:flex;justify-content:center;gap:6px;font-weight:600;flex-wrap:wrap;margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html#home" class="brand">
+      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+    </a>
+    <div class="menu">
+      <a href="index.html#experiences" class="btn" data-i18n="nav.experiences">Experiences</a>
+      <a href="#" class="btn" data-mail="smart" data-i18n="nav.contact">Contact Us</a>
+      <a href="index.html#book" class="btn btn--brand" data-i18n="nav.book">Book Now</a>
+      <div class="nav__flags">
+        <a href="#" class="lang-flag" data-lang="en" aria-label="English" title="English">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="es" aria-label="Español" title="Español">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="pt" aria-label="Português (Brasil)" title="Português (Brasil)">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="ja" aria-label="日本語" title="日本語">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <h1 data-i18n="terms.title">Terms &amp; Conditions</h1>
+    <p class="sub" data-i18n="terms.sub">Please review before booking.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+  <h3 data-i18n="terms.reservations.title">Reservations &amp; Payment</h3>
+  <p data-i18n="terms.reservations.p">A booking request is considered tentative until we send a written confirmation. Prices are per person in USD and may change with availability or seasonality. Submitting a request authorizes us to contact you to complete payment and confirm details.</p>
+  <h3 data-i18n="terms.changes.title">Changes &amp; Cancellations</h3>
+  <p data-i18n="terms.changes.p">You can change your date or time free of charge up to 72 hours before your tour, subject to availability. If you cancel between 72 and 24 hours before the start time, a 50% fee applies. Cancellations within 24 hours of the tour or no-shows are non-refundable.</p>
+  <h3 data-i18n="terms.weather.title">Weather &amp; Safety</h3>
+  <p data-i18n="terms.weather.p">Tours operate rain or shine. Routes may be adjusted for safety, comfort, or unexpected closures. In the case of extreme conditions, we will reschedule when possible or issue a credit at our discretion.</p>
+  <h3 data-i18n="terms.health.title">Health &amp; Accessibility</h3>
+  <p data-i18n="terms.health.p">Please tell us in advance about any mobility, dietary, or medical needs so we can advise on suitability and make reasonable arrangements. If a particular activity isn’t appropriate, we’ll suggest alternatives where available.</p>
+  <h3 data-i18n="terms.responsibility.title">Guest Responsibility</h3>
+  <p data-i18n="terms.responsibility.p">Guests agree to follow local laws and reasonable instructions from the guide. Miami Travel Bureau is not responsible for personal items lost or left behind during the tour.</p>
+  <h3 data-i18n="terms.liability.title">Liability</h3>
+  <p data-i18n="terms.liability.p">Participation is at your own risk. Miami Travel Bureau is not liable for injury, loss, or expenses caused by third-party providers, force majeure events, or circumstances beyond our control.</p>
+  <h3 data-i18n="terms.photography.title">Photography</h3>
+  <p data-i18n="terms.photography.p">We may capture photos or short video clips during tours for memories and marketing. Tell your guide at any time if you prefer not to be photographed and we will respect your preference.</p>
+  <h3 data-i18n="terms.contact.title">Contact</h3>
+  <p class="center" data-i18n="terms.contact.p">Questions about these terms? Email <a href="mailto:info@miamitravelbureau.com">info@miamitravelbureau.com</a>.</p>
+</main>
+
+<!-- CONTACT BUTTON & LOGO SECTION -->
+<section id="contact" class="band__contact">
+  <div class="container">
+    <a href="#" class="btn" data-mail="smart" data-i18n="contact.cta">Contact Us</a>
+  </div>
+  <div class="footer__logo">
+    <img src="logo_kit/mtb-mark-white-1024.png" alt="Miami Travel Bureau logo" />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Miami Travel Bureau</div>
+    <div class="footer__links">
+      <a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a> |
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> |
+      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Set year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Translation dictionary
+const I18N = {
+  en:{
+    "nav.experiences":"Experiences","nav.contact":"Contact Us","nav.book":"Book Now",
+    "contact.cta":"Contact Us",
+    "footer.terms":"Terms & Conditions","footer.privacy":"Privacy Policy","footer.faq":"FAQ",
+    "terms.title":"Terms & Conditions","terms.sub":"Please review before booking.",
+    "terms.reservations.title":"Reservations & Payment","terms.reservations.p":"A booking request is considered tentative until we send a written confirmation. Prices are per person in USD and may change with availability or seasonality. Submitting a request authorizes us to contact you to complete payment and confirm details.",
+    "terms.changes.title":"Changes & Cancellations","terms.changes.p":"You can change your date or time free of charge up to 72 hours before your tour, subject to availability. If you cancel between 72 and 24 hours before the start time, a 50% fee applies. Cancellations within 24 hours of the tour or no-shows are non-refundable.",
+    "terms.weather.title":"Weather & Safety","terms.weather.p":"Tours operate rain or shine. Routes may be adjusted for safety, comfort, or unexpected closures. In the case of extreme conditions, we will reschedule when possible or issue a credit at our discretion.",
+    "terms.health.title":"Health & Accessibility","terms.health.p":"Please tell us in advance about any mobility, dietary, or medical needs so we can advise on suitability and make reasonable arrangements. If a particular activity isn’t appropriate, we’ll suggest alternatives where available.",
+    "terms.responsibility.title":"Guest Responsibility","terms.responsibility.p":"Guests agree to follow local laws and reasonable instructions from the guide. Miami Travel Bureau is not responsible for personal items lost or left behind during the tour.",
+    "terms.liability.title":"Liability","terms.liability.p":"Participation is at your own risk. Miami Travel Bureau is not liable for injury, loss, or expenses caused by third-party providers, force majeure events, or circumstances beyond our control.",
+    "terms.photography.title":"Photography","terms.photography.p":"We may capture photos or short video clips during tours for memories and marketing. Tell your guide at any time if you prefer not to be photographed and we will respect your preference.",
+    "terms.contact.title":"Contact","terms.contact.p":"Questions about these terms? Email <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>.",
+  },
+  es:{
+    "nav.experiences":"Experiencias","nav.contact":"Contáctanos","nav.book":"Reservar Ahora",
+    "contact.cta":"Contáctanos",
+    "footer.terms":"Términos y Condiciones","footer.privacy":"Política de Privacidad","footer.faq":"Preguntas Frecuentes",
+    "terms.title":"Términos y Condiciones","terms.sub":"Por favor revísalos antes de reservar.",
+    "terms.reservations.title":"Reservaciones y Pagos","terms.reservations.p":"Una solicitud de reserva se considera provisional hasta que enviemos una confirmación por escrito. Los precios son por persona en USD y pueden cambiar según la disponibilidad o la temporada. Al enviar una solicitud nos autorizas a contactarte para completar el pago y confirmar los detalles.",
+    "terms.changes.title":"Cambios y Cancelaciones","terms.changes.p":"Puedes cambiar tu fecha u horario sin costo hasta 72 horas antes de tu tour, sujeto a disponibilidad. Si cancelas entre 72 y 24 horas antes de la hora de inicio, se aplica una tarifa del 50%. Las cancelaciones dentro de las 24 horas previas al tour o las ausencias no son reembolsables.",
+    "terms.weather.title":"Clima y Seguridad","terms.weather.p":"Los tours se realizan con lluvia o sol. Las rutas pueden ajustarse por seguridad, comodidad o cierres inesperados. En caso de condiciones extremas, reprogramaremos cuando sea posible o emitiremos un crédito a nuestra discreción.",
+    "terms.health.title":"Salud y Accesibilidad","terms.health.p":"Por favor infórmanos con anticipación sobre cualquier necesidad de movilidad, dieta o salud para que podamos asesorar sobre la idoneidad y hacer los arreglos razonables. Si una actividad no es apropiada, sugeriremos alternativas si están disponibles.",
+    "terms.responsibility.title":"Responsabilidad del Huésped","terms.responsibility.p":"Los huéspedes aceptan seguir las leyes locales y las instrucciones razonables del guía. Miami Travel Bureau no es responsable por objetos personales perdidos u olvidados durante el tour.",
+    "terms.liability.title":"Responsabilidad","terms.liability.p":"La participación es bajo tu propio riesgo. Miami Travel Bureau no se hace responsable por lesiones, pérdidas o gastos causados por proveedores externos, eventos de fuerza mayor o circunstancias fuera de nuestro control.",
+    "terms.photography.title":"Fotografía","terms.photography.p":"Podemos tomar fotos o videos cortos durante los tours para recuerdos y marketing. Dile a tu guía en cualquier momento si prefieres no ser fotografiado y respetaremos tu preferencia.",
+    "terms.contact.title":"Contacto","terms.contact.p":"¿Preguntas sobre estos términos? Escribe a <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>.",
+  },
+  pt:{
+    "nav.experiences":"Experiências","nav.contact":"Fale Conosco","nav.book":"Reservar Agora",
+    "contact.cta":"Fale Conosco",
+    "footer.terms":"Termos e Condições","footer.privacy":"Política de Privacidade","footer.faq":"Perguntas Frequentes",
+    "terms.title":"Termos e Condições","terms.sub":"Por favor revise antes de reservar.",
+    "terms.reservations.title":"Reservas e Pagamentos","terms.reservations.p":"Uma solicitação de reserva é considerada provisória até enviarmos uma confirmação por escrito. Os preços são por pessoa em USD e podem mudar conforme a disponibilidade ou temporada. Ao enviar uma solicitação, você nos autoriza a entrar em contato para concluir o pagamento e confirmar os detalhes.",
+    "terms.changes.title":"Alterações e Cancelamentos","terms.changes.p":"Você pode alterar sua data ou horário sem custo até 72 horas antes do seu tour, sujeito à disponibilidade. Se cancelar entre 72 e 24 horas antes do início, aplica-se uma taxa de 50%. Cancelamentos dentro de 24 horas do tour ou não comparecimento não são reembolsáveis.",
+    "terms.weather.title":"Clima e Segurança","terms.weather.p":"Os tours acontecem faça chuva ou sol. Os roteiros podem ser ajustados por segurança, conforto ou fechamentos inesperados. Em caso de condições extremas, reagendaremos quando possível ou emitiremos um crédito a nosso critério.",
+    "terms.health.title":"Saúde e Acessibilidade","terms.health.p":"Informe-nos com antecedência sobre quaisquer necessidades de mobilidade, dietéticas ou médicas para que possamos aconselhar sobre a adequação e fazer arranjos razoáveis. Se uma atividade específica não for apropriada, sugeriremos alternativas se disponíveis.",
+    "terms.responsibility.title":"Responsabilidade do Visitante","terms.responsibility.p":"Os visitantes concordam em seguir as leis locais e as instruções razoáveis do guia. O Miami Travel Bureau não é responsável por itens pessoais perdidos ou deixados para trás durante o tour.",
+    "terms.liability.title":"Responsabilidade","terms.liability.p":"A participação é por sua conta e risco. O Miami Travel Bureau não se responsabiliza por lesões, perdas ou despesas causadas por prestadores terceirizados, eventos de força maior ou circunstâncias fora de nosso controle.",
+    "terms.photography.title":"Fotografia","terms.photography.p":"Podemos fazer fotos ou pequenos vídeos durante os tours para memórias e marketing. Informe seu guia a qualquer momento se preferir não ser fotografado e respeitaremos sua preferência.",
+    "terms.contact.title":"Contato","terms.contact.p":"Dúvidas sobre estes termos? Envie um e-mail para <a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a>.",
+  },
+  ja:{
+    "nav.experiences":"エクスペリエンス","nav.contact":"お問い合わせ","nav.book":"予約する",
+    "contact.cta":"お問い合わせ",
+    "footer.terms":"利用規約","footer.privacy":"プライバシーポリシー","footer.faq":"よくある質問",
+    "terms.title":"利用規約","terms.sub":"予約前にご確認ください。",
+    "terms.reservations.title":"予約・お支払い","terms.reservations.p":"予約リクエストは、書面による確認をお送りするまで仮予約とみなします。料金はお一人様につきUSDで、空き状況や季節により変更される場合があります。リクエストを送信することで、お支払いの完了や詳細確認のためにご連絡することを許可するものとします。",
+    "terms.changes.title":"変更・キャンセル","terms.changes.p":"ツアーの72時間前までなら無料で日時の変更が可能です（空き状況による）。開始時間の72～24時間前にキャンセルした場合、料金の50％がかかります。ツアーの24時間以内のキャンセルや不参加は返金されません。",
+    "terms.weather.title":"天候・安全","terms.weather.p":"ツアーは雨天決行です。安全や快適さ、予期せぬ閉鎖によりルートが調整されることがあります。極端な状況の場合は、可能な限り日程を変更するか、当社の裁量でクレジットを発行します。",
+    "terms.health.title":"健康・バリアフリー","terms.health.p":"移動、食事、医療に関するご要望があれば事前にお知らせください。適切かどうか助言し、可能な範囲で対応いたします。特定のアクティビティが適切でない場合は、代替案をご提案します。",
+    "terms.responsibility.title":"ゲストの責任","terms.responsibility.p":"ゲストは地元の法律やガイドからの合理的な指示に従うことに同意します。ツアー中に紛失または置き忘れた私物について、Miami Travel Bureauは責任を負いません。",
+    "terms.liability.title":"免責事項","terms.liability.p":"参加は自己責任となります。Miami Travel Bureauは、第三者の提供者、不可抗力事象、または当社の管理を超える状況に起因する怪我、損失、費用について責任を負いません。",
+    "terms.photography.title":"写真撮影","terms.photography.p":"ツアー中に思い出やマーケティングのため写真や短い動画を撮影する場合があります。撮影を希望されない場合はいつでもガイドにお知らせください。ご要望に応じます。",
+    "terms.contact.title":"お問い合わせ","terms.contact.p":"これらの規約についてのご質問は、<a href=\"mailto:info@miamitravelbureau.com\">info@miamitravelbureau.com</a> にメールしてください。",
+  }
+};
+
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(!(key in dict)) return;
+    const val = dict[key];
+    if(/<\/?[a-z][\s\S]*>/i.test(val)) el.innerHTML = val;
+    else el.textContent = val;
+  });
+  document.documentElement.lang = lang;
+}
+
+document.querySelectorAll('.lang-flag').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    setLang(a.dataset.lang);
+  });
+});
+
+// initialize default language
+setLang('en');
+
+// smart mailto trigger
+document.querySelectorAll('[data-mail="smart"]').forEach(el=>{
+  el.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const to="info@miamitravelbureau.com";
+    const subject=encodeURIComponent('Miami Travel Bureau Inquiry');
+    const body=encodeURIComponent('Hello Lee,\n\nI’m interested in booking a Miami experience. Could you please provide more details?\n\nThank you!');
+    window.location.href=`mailto:${to}?subject=${subject}&body=${body}`;
+  });
+});
+</script>
+</body>
+</html>

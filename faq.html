@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Frequently Asked Questions — Miami Travel Bureau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
+<meta name="theme-color" content="#0F3C6B" />
+<style>
+  :root{
+    --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
+    --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
+    --glass-border:rgba(255,255,255,.30);--shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{width:min(1120px,92vw);margin-inline:auto}
+
+  /* Background */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;
+    background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
+    filter:brightness(.9) saturate(1.05);transform:scale(1.02);
+  }
+
+  /* Navbar */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
+    backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+    box-shadow:var(--shadow);
+  }
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:12px;margin-left:60px}
+  .brand__mark{height:48px;width:auto}
+  .brand__text{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;font-size:22px}
+  .menu{display:flex;gap:8px;align-items:center;margin-left:auto;padding-right:40px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+    font-weight:700;font-size:.9rem;color:#fff;background:var(--glass-fill);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+    box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
+  }
+  .btn:hover{background:var(--glass-fill-hover);border-color:#fff}
+  .btn:active{transform:translateY(1px)}
+  .btn--brand{
+    background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
+    border-color:var(--glass-border)
+  }
+
+  /* Flags */
+  .nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
+  .nav__flags a{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;padding:4px;
+    backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+    transition:all .25s ease;
+  }
+  .nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
+  .flag{width:20px;height:14px;border-radius:3px;display:block}
+
+  /* Header */
+  header{padding:18vh 0 8vh;text-align:center}
+  header .kicker{  text-align:center;color:var(--muted);  font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:12px;  margin:0 0 8px;}
+  header h1{  text-align:center;margin:0;  font-family:"Playfair Display",serif;font-weight:800;  font-size:clamp(34px,5vw,56px);line-height:1.06;color:#fff;}
+
+  /* Main */
+  main{padding:20px 0 64px}
+  .faq-shell{padding:0 0 72px}
+  .faq-card{
+    background:var(--glass-fill);
+    -webkit-backdrop-filter:blur(12px) saturate(140%);
+    backdrop-filter:blur(12px) saturate(140%);
+    border:1px solid var(--glass-border);
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    padding:34px 28px;
+  }
+  .faq-card p{  text-align:center; margin:0 auto 14px auto; max-width:900px; line-height:1.7; color:#E7EFF7;}
+  .faq-card p strong{  color:#fff;font-weight:800;font-family:"Playfair Display",serif;}
+
+  /* Contact band and logo */
+  .band__contact{text-align:center;padding:0}
+  .band__contact .btn{border-radius:999px}
+  .footer__logo{display:flex;justify-content:center;margin-top:24px;margin-bottom:0}
+  .footer__logo img{height:70px;opacity:.9;filter:drop-shadow(0 0 6px rgba(0,0,0,.3));transition:.3s}
+  .footer__logo img:hover{transform:scale(1.05);opacity:1}
+
+  /* Footer */
+  footer{text-align:center;color:#DFE9F6;padding:36px 0 20px}
+  .footer__links{display:flex;justify-content:center;gap:6px;font-weight:600;flex-wrap:wrap;margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html#home" class="brand">
+      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+    </a>
+    <div class="menu">
+      <a href="index.html#experiences" class="btn" data-i18n="nav.experiences">Experiences</a>
+      <a href="#" class="btn" data-mail="smart" data-i18n="nav.contact">Contact Us</a>
+      <a href="index.html#book" class="btn btn--brand" data-i18n="nav.book">Book Now</a>
+      <div class="nav__flags">
+        <a href="#" class="lang-flag" data-lang="en" aria-label="English" title="English">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="es" aria-label="Español" title="Español">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="pt" aria-label="Português (Brasil)" title="Português (Brasil)">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg>
+        </a>
+        <a href="#" class="lang-flag" data-lang="ja" aria-label="日本語" title="日本語">
+          <svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="kicker" data-i18n="faq.kicker">Guest Support</div>
+    <h1 data-i18n="faq.title">Frequently Asked Questions</h1>
+  </div>
+</header>
+
+<!-- FAQ CONTENT -->
+<main class="faq-shell">
+  <div class="container faq-card">
+    <p data-i18n="faq.q1"><strong>What’s included in the price?</strong> — Each experience includes professional guiding, scheduled activities, transportation when noted, and light refreshments. Gratuities are not included but are always appreciated for excellent service.</p>
+    <p data-i18n="faq.q2"><strong>How long does each experience last?</strong> — All experiences are designed as half-day tours, typically running from 10:00 a.m. to 3:00 p.m.</p>
+    <p data-i18n="faq.q3"><strong>Do I need to bring anything?</strong> — Comfortable clothing, sunscreen, and a positive attitude are all you need. Cameras are always encouraged.</p>
+    <p data-i18n="faq.q4"><strong>Are tours private or shared?</strong> — Group sizes are kept between 2–8 people for comfort. Private tours are available upon request.</p>
+    <p data-i18n="faq.q5"><strong>Are Miami Heat game tickets always available?</strong> — Tickets are offered only when home games are in season (October–April). Seat availability and pricing vary per game.</p>
+    <p data-i18n="faq.q6"><strong>Can I cancel or reschedule?</strong> — Cancellations are accepted up to 48 hours before the scheduled start time for a full refund. Within 48 hours, changes depend on availability.</p>
+    <p data-i18n="faq.q7"><strong>Do you accommodate dietary restrictions?</strong> — Yes. Please inform us of any dietary needs in advance so we can tailor your culinary stops accordingly.</p>
+    <p data-i18n="faq.q8"><strong>What languages do you offer tours in?</strong> — Tours are available in English, Spanish, Portuguese, and Japanese.</p>
+    <p data-i18n="faq.q9"><strong>What happens in case of bad weather?</strong> — Most experiences proceed as scheduled with indoor adjustments if necessary. In severe weather, guests will be contacted regarding rescheduling or refunds.</p>
+  </div>
+</main>
+
+<!-- CONTACT BUTTON & LOGO SECTION -->
+<section id="contact" class="band__contact">
+  <div class="container">
+    <a href="#" class="btn" data-mail="smart" data-i18n="contact.cta">Contact Us</a>
+  </div>
+  <div class="footer__logo">
+    <img src="logo_kit/mtb-mark-white-1024.png" alt="Miami Travel Bureau logo" />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Miami Travel Bureau</div>
+    <div class="footer__links">
+      <a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a> |
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> |
+      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Set year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Translation dictionary
+const I18N = {
+  en:{
+    "nav.experiences":"Experiences","nav.contact":"Contact Us","nav.book":"Book Now",
+    "contact.cta":"Contact Us",
+    "footer.terms":"Terms & Conditions","footer.privacy":"Privacy Policy","footer.faq":"FAQ",
+    "faq.kicker":"Guest Support","faq.title":"Frequently Asked Questions",
+    "faq.q1":"<strong>What’s included in the price?</strong> — Each experience includes professional guiding, scheduled activities, transportation when noted, and light refreshments. Gratuities are not included but are always appreciated for excellent service.",
+    "faq.q2":"<strong>How long does each experience last?</strong> — All experiences are designed as half-day tours, typically running from 10:00 a.m. to 3:00 p.m.",
+    "faq.q3":"<strong>Do I need to bring anything?</strong> — Comfortable clothing, sunscreen, and a positive attitude are all you need. Cameras are always encouraged.",
+    "faq.q4":"<strong>Are tours private or shared?</strong> — Group sizes are kept between 2–8 people for comfort. Private tours are available upon request.",
+    "faq.q5":"<strong>Are Miami Heat game tickets always available?</strong> — Tickets are offered only when home games are in season (October–April). Seat availability and pricing vary per game.",
+    "faq.q6":"<strong>Can I cancel or reschedule?</strong> — Cancellations are accepted up to 48 hours before the scheduled start time for a full refund. Within 48 hours, changes depend on availability.",
+    "faq.q7":"<strong>Do you accommodate dietary restrictions?</strong> — Yes. Please inform us of any dietary needs in advance so we can tailor your culinary stops accordingly.",
+    "faq.q8":"<strong>What languages do you offer tours in?</strong> — Tours are available in English, Spanish, Portuguese, and Japanese.",
+    "faq.q9":"<strong>What happens in case of bad weather?</strong> — Most experiences proceed as scheduled with indoor adjustments if necessary. In severe weather, guests will be contacted regarding rescheduling or refunds.",
+  },
+  es:{
+    "nav.experiences":"Experiencias","nav.contact":"Contáctanos","nav.book":"Reservar Ahora",
+    "contact.cta":"Contáctanos",
+    "footer.terms":"Términos y Condiciones","footer.privacy":"Política de Privacidad","footer.faq":"Preguntas Frecuentes",
+    "faq.kicker":"Atención al huésped","faq.title":"Preguntas Frecuentes",
+    "faq.q1":"<strong>¿Qué está incluido en el precio?</strong> — Cada experiencia incluye guía profesional, actividades programadas, transporte cuando se indica y refrigerios ligeros. Las propinas no están incluidas pero siempre son apreciadas por un servicio excelente.",
+    "faq.q2":"<strong>¿Cuánto dura cada experiencia?</strong> — Todas las experiencias están diseñadas como recorridos de medio día, generalmente de 10:00 a.m. a 3:00 p.m.",
+    "faq.q3":"<strong>¿Necesito llevar algo?</strong> — Solo necesitas ropa cómoda, protector solar y una actitud positiva. Se recomienda llevar cámara.",
+    "faq.q4":"<strong>¿Los tours son privados o compartidos?</strong> — Los grupos se mantienen entre 2 y 8 personas para mayor comodidad. Los tours privados están disponibles a petición.",
+    "faq.q5":"<strong>¿Siempre hay entradas para los Miami Heat?</strong> — Las entradas se ofrecen solo cuando hay partidos en casa durante la temporada (octubre-abril). La disponibilidad y el precio varían según el juego.",
+    "faq.q6":"<strong>¿Puedo cancelar o reprogramar?</strong> — Se aceptan cancelaciones hasta 48 horas antes del inicio programado para un reembolso completo. Dentro de 48 horas, los cambios dependen de la disponibilidad.",
+    "faq.q7":"<strong>¿Atienden restricciones dietéticas?</strong> — Sí. Por favor infórmanos de cualquier necesidad dietética con anticipación para que podamos adaptar tus paradas culinarias en consecuencia.",
+    "faq.q8":"<strong>¿En qué idiomas ofrecen los tours?</strong> — Los tours están disponibles en inglés, español, portugués y japonés.",
+    "faq.q9":"<strong>¿Qué sucede en caso de mal tiempo?</strong> — La mayoría de las experiencias continúan según lo programado con ajustes en interiores si es necesario. En caso de clima severo, nos pondremos en contacto con los huéspedes para reprogramar o reembolsar.",
+  },
+  pt:{
+    "nav.experiences":"Experiências","nav.contact":"Fale Conosco","nav.book":"Reservar Agora",
+    "contact.cta":"Fale Conosco",
+    "footer.terms":"Termos e Condições","footer.privacy":"Política de Privacidade","footer.faq":"Perguntas Frequentes",
+    "faq.kicker":"Suporte ao Visitante","faq.title":"Perguntas Frequentes",
+    "faq.q1":"<strong>O que está incluído no preço?</strong> — Cada experiência inclui guia profissional, atividades programadas, transporte quando indicado e lanches leves. Gorjetas não estão incluídas, mas são sempre apreciadas por um serviço excelente.",
+    "faq.q2":"<strong>Quanto tempo dura cada experiência?</strong> — Todas as experiências são concebidas como passeios de meio dia, normalmente das 10h às 15h.",
+    "faq.q3":"<strong>Preciso levar algo?</strong> — Roupas confortáveis, protetor solar e uma atitude positiva é tudo o que você precisa. Câmeras são sempre incentivadas.",
+    "faq.q4":"<strong>Os passeios são privados ou compartilhados?</strong> — Os grupos são mantidos entre 2 e 8 pessoas para conforto. Passeios privados estão disponíveis mediante solicitação.",
+    "faq.q5":"<strong>Os ingressos para jogos do Miami Heat estão sempre disponíveis?</strong> — Os ingressos são oferecidos apenas quando os jogos em casa estão na temporada (outubro-abril). A disponibilidade e o preço variam de acordo com o jogo.",
+    "faq.q6":"<strong>Posso cancelar ou reagendar?</strong> — Cancelamentos são aceitos até 48 horas antes do horário programado para reembolso total. Dentro de 48 horas, as alterações dependem da disponibilidade.",
+    "faq.q7":"<strong>Vocês acomodam restrições alimentares?</strong> — Sim. Informe-nos com antecedência sobre quaisquer necessidades dietéticas para que possamos adaptar suas paradas culinárias.",
+    "faq.q8":"<strong>Em quais idiomas vocês oferecem tours?</strong> — Os tours estão disponíveis em inglês, espanhol, português e japonês.",
+    "faq.q9":"<strong>O que acontece em caso de mau tempo?</strong> — A maioria das experiências continua como programado com ajustes internos se necessário. Em caso de clima severo, entraremos em contato com os hóspedes para reagendamento ou reembolso.",
+  },
+  ja:{
+    "nav.experiences":"エクスペリエンス","nav.contact":"お問い合わせ","nav.book":"予約する",
+    "contact.cta":"お問い合わせ",
+    "footer.terms":"利用規約","footer.privacy":"プライバシーポリシー","footer.faq":"よくある質問",
+    "faq.kicker":"ゲストサポート","faq.title":"よくある質問",
+    "faq.q1":"<strong>料金には何が含まれますか？</strong> — 各ツアーにはプロのガイド、予定されたアクティビティ、必要に応じた送迎、軽いリフレッシュメントが含まれます。チップは含まれていませんが、サービスが良かった場合にご寄付いただけます。",
+    "faq.q2":"<strong>各ツアーの所要時間は？</strong> — すべてのツアーは半日ツアーとして設計されており、通常は午前10時から午後3時までです。",
+    "faq.q3":"<strong>持ち物は必要ですか？</strong> — 動きやすい服装、日焼け止め、そして前向きな気持ちだけで大丈夫です。カメラの持参をお勧めします。",
+    "faq.q4":"<strong>ツアーはプライベートですか？それとも共有ですか？</strong> — グループサイズは快適さのため2〜8人に保たれています。プライベートツアーはご希望に応じて利用可能です。",
+    "faq.q5":"<strong>マイアミ・ヒートの試合チケットは常に利用できますか？</strong> — チケットはホームゲームがシーズン中（10月〜4月）のときのみ提供されます。席の availability と料金は試合によって異なります。",
+    "faq.q6":"<strong>キャンセルや日程変更はできますか？</strong> — 予定の48時間前までのキャンセルは全額返金されます。48時間以内の場合、変更は空き状況によります。",
+    "faq.q7":"<strong>食事制限には対応していますか？</strong> — はい。食事に関するご要望があれば事前にお知らせください。訪問する飲食店を調整します。",
+    "faq.q8":"<strong>どの言語でツアーを行っていますか？</strong> — ツアーは英語、スペイン語、ポルトガル語、日本語で提供しています。",
+    "faq.q9":"<strong>悪天候の場合はどうなりますか？</strong> — ほとんどのツアーは予定通り進行し、必要に応じて屋内に変更します。悪天候の場合は再調整または返金についてゲストにご連絡します。",
+  }
+};
+
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(!(key in dict)) return;
+    const val = dict[key];
+    if(/<\/?[a-z][\s\S]*>/i.test(val)) el.innerHTML = val;
+    else el.textContent = val;
+  });
+  document.documentElement.lang = lang;
+}
+
+document.querySelectorAll('.lang-flag').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    setLang(a.dataset.lang);
+  });
+});
+
+// default language
+setLang('en');
+
+// smart mailto trigger
+document.querySelectorAll('[data-mail="smart"]').forEach(el=>{
+  el.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const to='info@miamitravelbureau.com';
+    const subject=encodeURIComponent('Miami Travel Bureau Inquiry');
+    const body=encodeURIComponent('Hello Lee,\n\nI’m interested in booking a Miami experience. Could you please provide more details?\n\nThank you!');
+    window.location.href=`mailto:${to}?subject=${subject}&body=${body}`;
+  });
+});
+</script>
+</body>
+</html>
