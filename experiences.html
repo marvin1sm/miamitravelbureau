@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Miami Experiences — Miami Travel Bureau</title>
+<meta name="description" content="Discover curated Miami travel experiences with Miami Travel Bureau, from Wynwood street art adventures to Little Havana walks and Miami Beach highlights." />
+<meta property="og:title" content="Miami Experiences — Miami Travel Bureau" />
+<meta property="og:description" content="Curated Miami experiences blending art, culture and neighborhoods with a local guide." />
+<meta property="og:image" content="logo_kit/mtb-mark-white-1024.png" />
+<meta property="og:url" content="https://www.miamitravelbureau.com/experiences.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Miami Experiences — Miami Travel Bureau" />
+<meta name="twitter:description" content="Explore Miami through art, culture and local stories with our curated experiences." />
+<meta name="twitter:image" content="logo_kit/mtb-mark-white-1024.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
+<meta name="theme-color" content="#0F3C6B" />
+<style>
+:root{
+  --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
+  --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
+  --glass-border:rgba(255,255,255,.30);--shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92vw);margin-inline:auto}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
+  filter:brightness(.9) saturate(1.05);transform:scale(1.02);
+}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{scroll-snap-type:y mandatory}
+section,header.hero{min-height:98vh;scroll-snap-align:start;scroll-snap-stop:always}
+section{padding:72px 0}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
+  backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+  box-shadow:var(--shadow);
+}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;margin-left:60px}
+.brand__mark{height:48px;width:auto}
+.brand__text{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;font-size:22px}
+.menu{display:flex;gap:8px;align-items:center;margin-left:auto;padding-right:40px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+  font-weight:700;font-size:.9rem;color:#fff;background:var(--glass-fill);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+  box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
+}
+.btn:hover{background:var(--glass-fill-hover);border-color:#fff}
+.btn:active{transform:translateY(1px)}
+.btn--brand{
+  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
+  border-color:var(--glass-border)
+}
+.nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
+.nav__flags a{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px;backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);transition:all .25s ease;}
+.nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
+.flag{width:20px;height:14px;border-radius:3px;display:block}
+.hero{padding:18vh 0 14vh;text-align:center}
+h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1.03;margin:12px 0 18px}
+.lead{max-width:720px;color:#F4F8FD;font-size:18px;line-height:1.8;margin:auto}
+.cta-row{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;justify-content:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:24px}
+.card{background:rgba(22,78,139,.28);border:1px solid var(--glass-border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.card__media{height:190px;background:rgba(0,0,0,.25);overflow:hidden}
+.card__media img{width:100%;height:100%;object-fit:cover}
+.card__body{padding:18px}
+.title{font-weight:800;font-size:22px;margin:6px 0}
+.meta{color:var(--muted);font-size:14px;font-weight:800}
+.list{margin:14px 0;padding-left:18px}
+.list li{margin:8px 0;color:#F2F7FD}
+.card__foot{padding:16px}
+.card .btn{position:relative;left:50%;transform:translateX(-50%);margin-top:12px}
+.band__contact{text-align:center;padding:0}
+.band__contact .btn{border-radius:999px}
+.contact-info{margin-top:24px;text-align:center;color:#DFE9F6;line-height:1.8}
+footer{
+  text-align:center;
+  color:#DFE9F6;
+  padding:0 0 20px;
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","TouristInformationCenter"],
+  "name": "Miami Travel Bureau",
+  "url": "https://www.miamitravelbureau.com",
+  "description": "Private tours and Miami cultural experiences guided by a multilingual local expert.",
+  "image": "https://www.miamitravelbureau.com/logo_kit/mtb-mark-white-1024.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "priceRange": "$$"
+}
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="brand">
+      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+    </a>
+    <div class="menu">
+      <a href="experiences.html" class="btn btn--brand">Experiences</a>
+      <a href="tours.html" class="btn">Tours</a>
+      <a href="contact.html" class="btn">Contact Us</a>
+      <a href="tours.html#book" class="btn">Book Now</a>
+      <div class="nav__flags">
+        <a href="#" aria-label="English" title="English"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg></a>
+        <a href="#" aria-label="Español" title="Español"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg></a>
+        <a href="#" aria-label="Português" title="Português"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg></a>
+        <a href="#" aria-label="日本語" title="日本語"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>Miami experiences with a local touch</h1>
+    <p class="lead">From Wynwood murals to Little Havana stories and coastal sunsets, these experiences are designed for travelers who want connection, not crowds.</p>
+    <div class="cta-row">
+      <a href="#experiences-list" class="btn btn--brand">Explore Experiences</a>
+      <a href="tours.html#book" class="btn">Request Dates</a>
+    </div>
+  </div>
+</header>
+
+<section id="experiences-list">
+  <div class="container">
+    <h2>Our Miami Experiences</h2>
+    <p class="sub">Choose one or combine them into a full Miami day.</p>
+    <div class="cards" role="list">
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="daniel-Xj-MnOm0vWw-unsplash.jpg" alt="Wynwood"></div>
+        <div class="card__body">
+          <div class="meta">Art • Murals • Local stories</div>
+          <h3 class="title">Wynwood Essentials</h3>
+          <ul class="list">
+            <li>Street art and creative spaces</li>
+            <li>Backstreet stories about artists &amp; gentrification</li>
+            <li>Perfect before dinner or a night out</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="tours.html#book" class="btn btn--brand">Book</a>
+        </div>
+      </article>
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="hector-falcon-pzb9xmBe_wM-unsplash.jpg" alt="Little Havana"></div>
+        <div class="card__body">
+          <div class="meta">Culture • Food • Music</div>
+          <h3 class="title">Little Havana Like a Local</h3>
+          <ul class="list">
+            <li>Cuban coffee &amp; cigars</li>
+            <li>Stories of migration, music and politics</li>
+            <li>Flexible pace &amp; authentic stops</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="tours.html#book" class="btn btn--brand">Book</a>
+        </div>
+      </article>
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="naomi-tamar-6QZv3ziE5wg-unsplash.jpg" alt="Miami Beach"></div>
+        <div class="card__body">
+          <div class="meta">Ocean • Architecture • Relax</div>
+          <h3 class="title">Miami Beach Slow Walk</h3>
+          <ul class="list">
+            <li>Art Deco architecture &amp; history</li>
+            <li>Sunset stroll and photo stops</li>
+            <li>Great for couples and families</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="tours.html#book" class="btn btn--brand">Book</a>
+        </div>
+      </article>
+      <article class="card" role="listitem">
+        <div class="card__media"><img src="logo_kit/mtb-mark-white-1024.png" alt="Custom Experience"></div>
+        <div class="card__body">
+          <div class="meta">Custom • Personalized • Flexible</div>
+          <h3 class="title">Design Your Own Experience</h3>
+          <ul class="list">
+            <li>Blend neighborhoods, food, art and nightlife</li>
+            <li>Tell us your vibe and we’ll suggest ideas</li>
+            <li>Available in English, Spanish, Portuguese &amp; Japanese</li>
+          </ul>
+        </div>
+        <div class="card__foot">
+          <a href="tours.html#book" class="btn btn--brand">Book</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Miami Travel Bureau — Miami Experiences</div>
+  </div>
+</footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

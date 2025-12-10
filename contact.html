@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Miami Travel Bureau — Private Tours & Custom Experiences</title>
+<meta name="description" content="Contact Miami Travel Bureau to request dates, ask questions or design a custom private tour in Miami tailored to your group." />
+<meta property="og:title" content="Contact Miami Travel Bureau" />
+<meta property="og:description" content="Get in touch with Miami Travel Bureau to plan your private tour or custom Miami experience." />
+<meta property="og:image" content="logo_kit/mtb-mark-white-1024.png" />
+<meta property="og:url" content="https://www.miamitravelbureau.com/contact.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Miami Travel Bureau" />
+<meta name="twitter:description" content="Send a message or WhatsApp Miami Travel Bureau to plan your next Miami experience." />
+<meta name="twitter:image" content="logo_kit/mtb-mark-white-1024.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
+<meta name="theme-color" content="#0F3C6B" />
+<style>
+:root{
+  --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
+  --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
+  --glass-border:rgba(255,255,255,.30);--shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92vw);margin-inline:auto}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
+  filter:brightness(.9) saturate(1.05);transform:scale(1.02);
+}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{scroll-snap-type:y mandatory}
+section,header.hero{min-height:98vh;scroll-snap-align:start;scroll-snap-stop:always}
+section{padding:72px 0}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
+  backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+  box-shadow:var(--shadow);
+}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;margin-left:60px}
+.brand__mark{height:48px;width:auto}
+.brand__text{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;font-size:22px}
+.menu{display:flex;gap:8px;align-items:center;margin-left:auto;padding-right:40px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+  font-weight:700;font-size:.9rem;color:#fff;background:var(--glass-fill);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);
+  box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
+}
+.btn:hover{background:var(--glass-fill-hover);border-color:#fff}
+.btn:active{transform:translateY(1px)}
+.btn--brand{
+  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
+  border-color:var(--glass-border)
+}
+.nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
+.nav__flags a{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px;backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);transition:all .25s ease;}
+.nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
+.flag{width:20px;height:14px;border-radius:3px;display:block}
+.hero{padding:18vh 0 14vh;text-align:center}
+h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1.03;margin:12px 0 18px}
+.lead{max-width:720px;color:#F4F8FD;font-size:18px;line-height:1.8;margin:auto}
+.cta-row{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;justify-content:center}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field--full{grid-column:1/-1}
+.field label{font-weight:700;color:#DFE9F6}
+.field input,.field textarea{border-radius:14px;padding:12px 14px;border:1px solid var(--glass-border);background:var(--glass-fill);color:#fff;outline:none;backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.75)}
+.field input:focus,.field textarea:focus{border-color:#fff}
+.contact-info{margin-top:24px;text-align:center;color:#DFE9F6;line-height:1.8}
+.band__contact{text-align:center;padding:0}
+.band__contact .btn{border-radius:999px}
+footer{
+  text-align:center;
+  color:#DFE9F6;
+  padding:0 0 20px;
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","TouristInformationCenter"],
+  "name": "Miami Travel Bureau",
+  "url": "https://www.miamitravelbureau.com",
+  "description": "Private tours and Miami cultural experiences guided by a multilingual local expert.",
+  "image": "https://www.miamitravelbureau.com/logo_kit/mtb-mark-white-1024.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "priceRange": "$$"
+}
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="brand">
+      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+    </a>
+    <div class="menu">
+      <a href="experiences.html" class="btn">Experiences</a>
+      <a href="tours.html" class="btn">Tours</a>
+      <a href="contact.html" class="btn btn--brand">Contact Us</a>
+      <a href="tours.html#book" class="btn">Book Now</a>
+      <div class="nav__flags">
+        <a href="#" aria-label="English" title="English"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg></a>
+        <a href="#" aria-label="Español" title="Español"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg></a>
+        <a href="#" aria-label="Português" title="Português"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg></a>
+        <a href="#" aria-label="日本語" title="日本語"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>Contact Miami Travel Bureau</h1>
+    <p class="lead">We’d love to hear from you! Share your dates, group size and interests — we’ll get back to you with personal ideas and availability.</p>
+  </div>
+</header>
+
+<section id="contact-section">
+  <div class="container">
+    <h2>Send a Message</h2>
+    <div class="card" style="background:rgba(22,78,139,.28);border:1px solid var(--glass-border);border-radius:18px;padding:24px;box-shadow:var(--shadow);">
+      <form id="contact-form" class="form-grid">
+        <div class="field">
+          <label for="c-name">Your name</label>
+          <input id="c-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" placeholder="name@example.com" required>
+        </div>
+        <div class="field">
+          <label for="c-dates">Preferred date(s)</label>
+          <input id="c-dates" name="dates" type="text" placeholder="e.g. March 12–14">
+        </div>
+        <div class="field">
+          <label for="c-group">Number of travelers</label>
+          <input id="c-group" name="group" type="number" min="1" max="12">
+        </div>
+        <div class="field field--full">
+          <label for="c-message">How can we help?</label>
+          <textarea id="c-message" name="message" rows="4" placeholder="What kind of tour or support are you looking for?"></textarea>
+        </div>
+        <div class="field field--full">
+          <button type="submit" class="btn btn--brand">Send Message</button>
+        </div>
+      </form>
+    </div>
+    <h2 style="margin-top:48px;">Direct Contact</h2>
+    <p class="contact-info">Email: <a href="mailto:info@miamitravelbureau.com">info@miamitravelbureau.com</a><br>WhatsApp: <a href="https://wa.me/13212223560" target="_blank">+1 (321) 222-3560</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Miami Travel Bureau — Contact</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
