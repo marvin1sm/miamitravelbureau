@@ -19,7 +19,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="logo_kit/mtb-mark-white-1024.png">
 <meta name="theme-color" content="#0F3C6B" />
+
 <style>
+/* Root variables and reset */
 :root{
   --brand:#164E8B;--brand-2:#0F3C6B;--fg:#fff;--muted:#E7F0FA;
   --glass-fill:rgba(255,255,255,.12);--glass-fill-hover:rgba(255,255,255,.18);
@@ -30,15 +32,15 @@ html,body{color:var(--fg);font-family:Manrope,system-ui,-apple-system,Segoe UI,R
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{width:min(1120px,92vw);margin-inline:auto}
+
+/* Background */
 body::before{
   content:"";position:fixed;inset:0;z-index:-1;
   background:url('shawn-henley-3CQQlwWpn70-unsplash.jpg') center/cover no-repeat fixed;
   filter:brightness(.9) saturate(1.05);transform:scale(1.02);
 }
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{scroll-snap-type:y mandatory}
-section,header.hero{min-height:98vh;scroll-snap-align:start;scroll-snap-stop:always}
-section{padding:72px 0}
+
+/* Navbar */
 .nav{
   position:sticky;top:0;z-index:50;
   background:linear-gradient(180deg,rgba(22,78,139,.22),rgba(15,60,107,.4));
@@ -58,127 +60,64 @@ section{padding:72px 0}
   box-shadow:var(--shadow);transition:background .2s,border-color .2s,transform .06s;white-space:nowrap;
 }
 .btn:hover{background:var(--glass-fill-hover);border-color:#fff}
-.btn:active{transform:translateY(1px)}
 .btn--brand{
   background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06)),rgba(22,78,139,.35);
-  border-color:var(--glass-border)
+  border-color:var(--glass-border);
 }
-.nav__flags{display:flex;align-items:center;gap:12px;margin-left:20px;padding-right:30px}
-.nav__flags a{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px;backdrop-filter:blur(8px) saturate(140%);-webkit-backdrop-filter:blur(8px) saturate(140%);transition:all .25s ease;}
-.nav__flags a:hover{transform:scale(1.1);background:rgba(255,255,255,.15);box-shadow:0 0 8px rgba(255,255,255,.35)}
-.flag{width:20px;height:14px;border-radius:3px;display:block}
-.hero{padding:18vh 0 14vh;text-align:center}
-h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1.03;margin:12px 0 18px}
-.lead{max-width:720px;color:#F4F8FD;font-size:18px;line-height:1.8;margin:auto}
-.cta-row{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;justify-content:center}
-.card-list{margin:14px 0;padding-left:18px;list-style:disc;color:#F2F7FD}
-.card-list li{margin:8px 0}
-.band__contact{text-align:center;padding:0}
-.band__contact .btn{border-radius:999px}
-.contact-info{margin-top:24px;text-align:center;color:#DFE9F6;line-height:1.8}
+
+/* Footer */
 footer{
   text-align:center;
   color:#DFE9F6;
-  padding:0 0 20px;
+  padding:15px;
+}
+.footer__logo{
+  text-align:center;
+  margin:20px 0;
+}
+.footer__logo img{
+  height:70px;
+  filter:drop-shadow(0 0 6px rgba(0,0,0,.3));
+  transition:.3s;
+}
+.footer__logo img:hover{
+  transform:scale(1.05);
+  opacity:1;
 }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness","TouristInformationCenter"],
-  "name": "Miami Travel Bureau",
-  "url": "https://www.miamitravelbureau.com",
-  "description": "Private tours and Miami cultural experiences guided by a multilingual local expert.",
-  "image": "https://www.miamitravelbureau.com/logo_kit/mtb-mark-white-1024.png",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Miami",
-    "addressRegion": "FL",
-    "addressCountry": "US"
-  },
-  "priceRange": "$$"
-}
-</script>
 </head>
 <body>
-<nav class="nav">
-  <div class="nav__inner">
-    <a href="index.html" class="brand">
-      <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
-      <span class="brand__text">MIAMI TRAVEL BUREAU</span>
-    </a>
-    <div class="menu">
-      <a href="experiences.html" class="btn">Experiences</a>
-      <a href="tours.html" class="btn">Tours</a>
-      <a href="contact.html" class="btn">Contact Us</a>
-      <a href="tours.html#book" class="btn">Book Now</a>
-      <div class="nav__flags">
-        <a href="#" aria-label="English" title="English"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#b31942"/><g fill="#fff"><rect y="4" width="64" height="4"/><rect y="12" width="64" height="4"/><rect y="20" width="64" height="4"/><rect y="28" width="64" height="4"/><rect y="36" width="64" height="4"/><rect y="44" width="64" height="4"/></g><rect width="28" height="20" fill="#0a3161"/></svg></a>
-        <a href="#" aria-label="Español" title="Español"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#c60b1e"/><rect y="12" width="64" height="24" fill="#ffc400"/></svg></a>
-        <a href="#" aria-label="Português" title="Português"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#009b3a"/><polygon points="32,6 58,24 32,42 6,24" fill="#ffdf00"/><circle cx="32" cy="24" r="10" fill="#002776"/></svg></a>
-        <a href="#" aria-label="日本語" title="日本語"><svg class="flag" viewBox="0 0 64 48"><rect width="64" height="48" fill="#fff"/><circle cx="32" cy="24" r="10" fill="#bc002d"/></svg></a>
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <img class="brand__mark" src="logo_kit/mtb-mark-white-1024.png" alt="MTB">
+        <span class="brand__text">MIAMI TRAVEL BUREAU</span>
+      </a>
+
+      <div class="menu">
+        <a href="experiences.html" class="btn">Experiences</a>
+        <a href="tours.html" class="btn">Tours</a>
+        <a href="contact.html" class="btn">Contact</a>
+        <a href="tours.html#book" class="btn btn--brand">Book Now</a>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<header class="hero">
-  <div class="container">
-    <h1>About Miami Travel Bureau</h1>
-    <p class="lead">A boutique, bilingual tour service focused on art, culture and real conversations instead of generic sightseeing.</p>
-  </div>
-</header>
-
-<section>
-  <div class="container" style="max-width:900px;margin:auto;">
-    <h2>The Idea Behind Miami Travel Bureau</h2>
-    <p>Miami Travel Bureau was born from years of guiding travelers in Havana, Santiago and Miami, and seeing how much people appreciate honest local context and flexible itineraries.</p>
-    <p>Instead of big buses and megaphones, you get a small‑scale, private experience hosted by someone who actually lives here and works between languages and cultures every day.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container" style="max-width:900px;margin:auto;">
-    <h2>What You Can Expect</h2>
-    <ul class="card-list">
-      <li>Private or small‑group experiences only</li>
-      <li>Bilingual guiding (Spanish, English, Japanese or Portuguese)</li>
-      <li>Flexible itineraries built around your interests</li>
-      <li>Respectful storytelling around Miami’s communities</li>
-      <li>Help with logistics, reservations and local tips</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <div class="container" style="max-width:900px;margin:auto;">
-    <h2>Your Guide</h2>
-    <p>Lee Marvin Segundo is a tour guide, travel planner and translator who has worked with guests from all over the world. He combines a background in sports and languages with a love for street art, music and neighborhood stories.</p>
-    <p>He has designed experiences for independent travelers, families, travel agencies and brands looking for a deeper, more human view of Miami.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container" style="max-width:900px;margin:auto;">
-    <h2>Ready to plan your time in Miami?</h2>
-    <p>Tell us your dates, who you’re traveling with and what you want to feel or learn. We’ll give you honest ideas, not a hard sell.</p>
-    <div class="band__contact" style="margin-top:20px;">
-      <a href="mailto:info@miamitravelbureau.com" class="btn btn--brand">Contact Miami Travel Bureau</a>
-      <div class="contact-info">
-        WhatsApp: <a href="https://wa.me/13212223560" target="_blank">+1 (321) 222-3560</a>
-      </div>
+  <!-- Content -->
+  <header class="hero">
+    <div class="container">
+      <h1>Miami Travel Bureau: About Us</h1>
+      <p class="lead">Learn about our style, approach, and unique Miami tours.</p>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer>
-  <div class="container">
-    <div>© <span id="year"></span> Miami Travel Bureau — About</div>
-  </div>
-</footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- Footer -->
+  <footer>
+    <div class="footer__logo">
+      <img src="logo_kit/mtb-mark-white-1024.png" alt="Miami Travel Bureau">
+    </div>
+    <div>© 2025 Miami Travel Bureau – All Rights Reserved</div>
+  </footer>
 </body>
 </html>
